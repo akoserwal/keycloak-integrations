@@ -1,5 +1,7 @@
 # vue-keycloak
 
+Read: https://medium.com/keycloak/secure-vue-js-app-with-keycloak-94814181e344
+
 ## Project setup
 ```
 npm install
