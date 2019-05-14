@@ -30,7 +30,6 @@ keycloak.init({ onLoad: initOptions.onLoad }).success((auth) =>{
       window.location.reload();
     } else {
       Vue.$log.info("Authenticated");
-
     }
  
     new Vue({
