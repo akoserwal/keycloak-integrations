@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Secure Angular with Keycloak';
+  title = 'your Secure Angular with Keycloak';
 }
