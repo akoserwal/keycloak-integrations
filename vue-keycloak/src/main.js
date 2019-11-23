@@ -19,7 +19,7 @@ Vue.use(VueLogger, options);
 
 //keycloak init options
 let initOptions = {
-  url: 'https://0.0.0.0:8445/auth', realm: 'keycloak-demo', clientId: 'vue-test-app', onLoad:'login-required'
+  url: 'http://127.0.0.1:8081/auth', realm: 'keycloak-demo', clientId: 'vue-test-app', onLoad:'login-required'
 }
 
 let keycloak = Keycloak(initOptions);
