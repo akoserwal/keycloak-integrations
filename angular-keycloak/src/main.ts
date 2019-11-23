@@ -12,7 +12,7 @@ if (environment.production) {
 
 //keycloak init options
 let initOptions = {
-  url: 'https://0.0.0.0:8445/auth', realm: 'keycloak-demo', clientId: 'angular-test-app'
+  url: 'https://127.0.0.1:8443/auth', realm: 'keycloak-demo', clientId: 'angular-test-app'
 }
 
 let keycloak = Keycloak(initOptions);
