@@ -37,13 +37,14 @@ keycloak.init({ onLoad: initOptions.onLoad }).success((auth) =>{
     }).$mount('#app')
   
 
+    // TODO: Maybe dont store the token in the localstore, rather use it direct from the keycloak.token object
     localStorage.setItem("vue-token", keycloak.token);
     localStorage.setItem("vue-refresh-token", keycloak.refreshToken);
 
-    setTimeout(() =>{
+    setInterval(() =>{
       keycloak.updateToken(70).success((refreshed)=>{
         if (refreshed) {
-          Vue.$log.debug('Token refreshed'+ refreshed);
+          Vue.$log.debug('Token refreshed');
         } else {
           Vue.$log.warn('Token not refreshed, valid for '
           + Math.round(keycloak.tokenParsed.exp + keycloak.timeSkew - new Date().getTime() / 1000) + ' seconds');
