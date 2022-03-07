@@ -1,13 +1,12 @@
 package main
 
 import (
-	"context"
 	"encoding/json"
 	"errors"
 	"fmt"
-	"github.com/golang-jwt/jwt/v4"
 	"github.com/gorilla/mux"
 	"github.com/lestrrat-go/jwx/jwk"
+	"github.com/lestrrat-go/jwx/jwt"
 	"github.com/rs/cors"
 	"log"
 	"net/http"
@@ -58,7 +57,7 @@ func CountHandler(writer http.ResponseWriter, request *http.Request) {
 		json.NewEncoder(writer).Encode(map[string]string{"reason": err.Error()})
 		writer.WriteHeader(http.StatusBadRequest)
 	}
-	if token!= nil && token.Valid {
+	if token!= nil {
 		count++
 		writer.WriteHeader(http.StatusOK)
 		json.NewEncoder(writer).Encode(map[string]int{"count": count})
@@ -67,12 +66,16 @@ func CountHandler(writer http.ResponseWriter, request *http.Request) {
 	}
 }
 
-func verifyToken(request *http.Request) (*jwt.Token, error ){
+func verifyToken(request *http.Request) (jwt.Token, error) {
 	strToken, err := GetAuthHeader(request)
 	if err != nil {
 		return nil, err
 	}
-	token, err := jwt.Parse(strToken, getKey)
+	jwksKeySet, err :=jwk.Fetch(request.Context(), jwksURL)
+	if err != nil {
+		return nil, err
+	}
+	token, err := jwt.Parse([]byte(strToken),jwt.WithKeySet(jwksKeySet), jwt.WithValidate(true))
 	if err != nil {
 		return nil, err
 	}
@@ -86,25 +89,3 @@ func GetAuthHeader(request *http.Request) (string, error) {
 	}
 	return header[1], nil
 }
-
-func getKey(token *jwt.Token) (interface{}, error) {
-	ctx := context.Background()
-	keySet, err := jwk.Fetch(ctx, jwksURL)
-	if err != nil {
-		return nil, err
-	}
-
-	keyID, ok := token.Header["kid"].(string)
-	if !ok {
-		return nil, errors.New("expecting JWT header to have string kid")
-	}
-
-	keys, ok := keySet.LookupKeyID(keyID);
-	if ok == false {
-		return nil, fmt.Errorf("key %v not found", keyID)
-	}
-
-	var raw interface{}
-	return raw, keys.Raw(&raw)
-}
-
