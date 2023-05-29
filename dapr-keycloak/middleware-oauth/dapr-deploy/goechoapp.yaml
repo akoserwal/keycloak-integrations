@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: goechoapp
+  labels:
+    app: goecho
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: goecho
+  template:
+    metadata:
+      labels:
+        app: goecho
+      annotations:
+        dapr.io/enabled: "true"
+        dapr.io/app-id: "goechoapp"
+        dapr.io/app-port: "3000"
+        dapr.io/config: "pipeline"
+        dapr.io/sidecar-listen-addresses: "0.0.0.0"
+    spec:
+      containers:
+      - name: goecho
+        image: docker.io/akoserwal/goechoapp:latest
+        ports:
+        - containerPort: 3000
+        imagePullPolicy: Always
