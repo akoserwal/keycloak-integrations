@@ -1,0 +1,23 @@
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: oauth2
+spec:
+  type: middleware.http.oauth2
+  version: v1
+  metadata:
+  - name: clientId
+    value: "dapr-demo"
+  - name: clientSecret
+    value: "<secret>"
+  - name: scopes
+    value: "openid profile"
+  - name: authURL
+    value: "http://<keycloak-server>/realms/demo/protocol/openid-connect/auth"
+  - name: tokenURL
+    value: "http://<keycloak-server>/realms/demo/protocol/openid-connect/token"
+  - name: redirectURL
+    value: "<kind cluster ip>"
+  - name: authHeaderName
+    value: "authorization"
+ 
