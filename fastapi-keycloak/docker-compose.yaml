@@ -1,0 +1,12 @@
+ services:
+  keycloak:
+    image: "quay.io/keycloak/keycloak:latest"
+    command: "start-dev --import-realm"
+    restart: "on-failure"
+    environment:
+      - "KEYCLOAK_ADMIN=admin"
+      - "KEYCLOAK_ADMIN_PASSWORD=admin"
+    volumes:
+      - ./realm-export.json:/opt/keycloak/data/import/myrealm.json
+    ports:
+      - 8080:8080

@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "fastapi-keycloak"
+version = "0.1.0"
+description = ""
+authors = ["Abhishek koserwal"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = {extras = ["standard"], version = "^0.112.1"}
+python-keycloak = "^4.3.0"
+python-jose = "^3.3.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
