@@ -1,0 +1,11 @@
+[project]
+name = "mcp-keycloak"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastmcp>=2.3.4",
+    "llama-stack-client>=0.2.6",
+    "python-keycloak>=5.5.0",
+]
