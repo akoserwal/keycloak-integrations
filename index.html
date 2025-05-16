@@ -1,1 +1,394 @@
-<h1>keycloak-integrations</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keycloak Integrations | GitHub Repository</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #24292e;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            border-bottom: 1px solid #e1e4e8;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+        .repo-description {
+            font-size: 16px;
+            color: #586069;
+            margin-bottom: 16px;
+        }
+        .repo-meta {
+            font-size: 14px;
+            color: #586069;
+            display: flex;
+            gap: 16px;
+        }
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 16px;
+        }
+        .project-card {
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 16px;
+            transition: transform 0.2s;
+        }
+        .project-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .project-title {
+            font-size: 18px;
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+        .project-title a {
+            color: #0366d6;
+            text-decoration: none;
+        }
+        .project-title a:hover {
+            text-decoration: underline;
+        }
+        .project-description {
+            margin-bottom: 12px;
+            color: #586069;
+            font-size: 14px;
+        }
+        .language {
+            display: inline-block;
+            height: 12px;
+            width: 12px;
+            border-radius: 50%;
+            position: relative;
+            top: 1px;
+        }
+        .language-info {
+            font-size: 12px;
+            color: #586069;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e1e4e8;
+            font-size: 14px;
+            color: #586069;
+        }
+        .category {
+            margin-top: 30px;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #e1e4e8;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>
+            <a href="https://github.com/akoserwal/keycloak-integrations" style="color: inherit; text-decoration: none;">
+                <span>akoserwal / </span>
+                <strong>keycloak-integrations</strong>
+            </a>
+        </h1>
+        <p class="repo-description">
+            A comprehensive collection of Keycloak integrations with various platforms, frameworks, and services.
+        </p>
+        <div class="repo-meta">
+            <span>⭐ <strong>X</strong> stars</span>
+            <span>📌 <strong>X</strong> forks</span>
+            <span>🔄 Updated on <strong>Month Day, Year</strong></span>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h2 class="category">Frontend Integrations</h2>
+            <div class="projects-container">
+                <div class="project-card">
+                    <h3 class="project-title">
+                        <a href="https://github.com/akoserwal/keycloak-integrations/tree/main/angular-keycloak">
+                            angular-keycloak
+                        </a>
+                    </h3>
+                    <p class="project-description">
+                        Keycloak integration for Angular applications with authentication flows
+                    </p>
+                    <div class="language-info">
+                        <span class="language" style="background-color: #DD0031;"></span>
+                        <span>TypeScript</span>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <h3 class="project-title">
+                        <a href="https://github.com/akoserwal/keycloak-integrations/tree/main/react-keycloak">
+                            react-keycloak
+                        </a>
+                    </h3>
+                    <p class="project-description">
+                        React components and hooks for Keycloak authentication
+                    </p>
+                    <div class="language-info">
+                        <span class="language" style="background-color: #61DAFB;"></span>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <h3 class="project-title">
+                        <a href="https://github.com/akoserwal/keycloak-integrations/tree/main/vue-keycloak">
+                            vue-keycloak
+                        </a>
+                    </h3>
+                    <p class="project-description">
+                        Vue.js plugin for Keycloak authentication and authorization
+                    </p>
+                    <div class="language-info">
+                        <span class="language" style="background-color: #4FC08D;"></span>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <h3 class="project-title">
+                        <a href="https://github.com/akoserwal/keycloak-integrations/tree/main/quarkus-react-keycloak">
+                            quarkus-react-keycloak
+                        </a>
+                    </h3>
+                    <p class="project-description">
+                        Full-stack example with Quarkus backend and React frontend using Keycloak
+                    </p>
+                    <div class="language-info">
+                        <span class="language" style="background-color: #4695EB;"></span>
+                        <span>Java/JS</span>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <h3 class="project-title">
+                        <a href="https://github.com/akoserwal/keycloak-integrations/tree/main/svelte-go-keycloak">
+                            svelte-go-keycloak
+                        </a>
+                    </h3>
+                    <p class="project-description">
+                        Svelte frontend with Go backend integrated with Keycloak
+                    </p>
+                    <div class="language-info">
+                        <span class="language" style="background-color: #FF3E00;"></span>
+                        <span>Svelte/Go</span>
+                    </div>
+                </div>
+            </div>
+            
+            <h2 class="category">Backend Integrations</h2>
+            <div class="projects-container">
+                <div class="project-card">
+                    <h3 class="project-title">
+                        <a href="https://github.com/akoserwal/keycloak-integrations/tree/main/fastapi-keycloak">
+                            fastapi-keycloak
+                        </a>
+                    </h3>
+                    <p class="project-description">
+                        Keycloak integration for FastAPI Python applications
+                    </p>
+                    <div class="language-info">
+                        <span class="language" style="background-color: #3776AB;"></span>
+                        <span>Python</span>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <h3 class="project-title">
+                        <a href="https://github.com/akoserwal/keycloak-integrations/tree/main/spring-boot-mvc-keycloak">
+                            spring-boot-mvc-keycloak
+                        </a>
+                    </h3>
+                    <p class="project-description">
+                        Spring Boot MVC application with Keycloak authentication
+                    </p>
+                    <div class="language-info">
+                        <span class="language" style="background-color: #6DB33F;"></span>
+                        <span>Java</span>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <h3 class="project-title">
+                        <a href="https://github.com/akoserwal/keycloak-integrations/tree/main/dapr-keycloak">
+                            dapr-keycloak
+                        </a>
+                    </h3>
+                    <p class="project-description">
+                        Dapr service invocation with Keycloak authentication
+                    </p>
+                    <div class="language-info">
+                        <span class="language" style="background-color: #0D9EFF;"></span>
+                        <span>Various</span>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <h3 class="project-title">
+                        <a href="https://github.com/akoserwal/keycloak-integrations/tree/main/serviceaccount-admin-api">
+                            serviceaccount-admin-api
+                        </a>
+                    </h3>
+                    <p class="project-description">
+                        API for managing Keycloak service accounts programmatically
+                    </p>
+                    <div class="language-info">
+                        <span class="language" style="background-color: #3572A5;"></span>
+                        <span>Java</span>
+                    </div>
+                </div>
+            </div>
+            
+            <h2 class="category">Keycloak Extensions</h2>
+            <div class="projects-container">
+                <div class="project-card">
+                    <h3 class="project-title">
+                        <a href="https://github.com/akoserwal/keycloak-integrations/tree/main/keycloak-spi-kafka">
+                            keycloak-spi-kafka
+                        </a>
+                    </h3>
+                    <p class="project-description">
+                        Keycloak SPI for publishing events to Kafka
+                    </p>
+                    <div class="language-info">
+                        <span class="language" style="background-color: #000000;"></span>
+                        <span>Java</span>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <h3 class="project-title">
+                        <a href="https://github.com/akoserwal/keycloak-integrations/tree/main/keycloak-spi-rhosak">
+                            keycloak-spi-rhosak
+                        </a>
+                    </h3>
+                    <p class="project-description">
+                        Red Hat OpenShift Streams for Apache Kafka (RHOSAK) integration
+                    </p>
+                    <div class="language-info">
+                        <span class="language" style="background-color: #CC0000;"></span>
+                        <span>Java</span>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <h3 class="project-title">
+                        <a href="https://github.com/akoserwal/keycloak-integrations/tree/main/keycloak-default-sa">
+                            keycloak-default-sa
+                        </a>
+                    </h3>
+                    <p class="project-description">
+                        Default service account configuration for Keycloak clients
+                    </p>
+                    <div class="language-info">
+                        <span class="language" style="background-color: #3572A5;"></span>
+                        <span>Java</span>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <h3 class="project-title">
+                        <a href="https://github.com/akoserwal/keycloak-integrations/tree/main/kc-dynamic-client">
+                            kc-dynamic-client
+                        </a>
+                    </h3>
+                    <p class="project-description">
+                        Dynamic client registration extension for Keycloak
+                    </p>
+                    <div class="language-info">
+                        <span class="language" style="background-color: #3572A5;"></span>
+                        <span>Java</span>
+                    </div>
+                </div>
+            </div>
+            
+            <h2 class="category">Infrastructure & Utilities</h2>
+            <div class="projects-container">
+                <div class="project-card">
+                    <h3 class="project-title">
+                        <a href="https://github.com/akoserwal/keycloak-integrations/tree/main/keycloak-postgresql">
+                            keycloak-postgresql
+                        </a>
+                    </h3>
+                    <p class="project-description">
+                        Keycloak with PostgreSQL database configuration and optimizations
+                    </p>
+                    <div class="language-info">
+                        <span class="language" style="background-color: #336791;"></span>
+                        <span>SQL/Shell</span>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <h3 class="project-title">
+                        <a href="https://github.com/akoserwal/keycloak-integrations/tree/main/kafka-sasl-oauth-keycloak">
+                            kafka-sasl-oauth-keycloak
+                        </a>
+                    </h3>
+                    <p class="project-description">
+                        Kafka SASL/OAuth configuration using Keycloak as identity provider
+                    </p>
+                    <div class="language-info">
+                        <span class="language" style="background-color: #000000;"></span>
+                        <span>Java/Config</span>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <h3 class="project-title">
+                        <a href="https://github.com/akoserwal/keycloak-integrations/tree/main/mcp-keycloak">
+                            mcp-keycloak
+                        </a>
+                    </h3>
+                    <p class="project-description">
+                        Managed Control Plane integration with Keycloak
+                    </p>
+                    <div class="language-info">
+                        <span class="language" style="background-color: #326CE5;"></span>
+                        <span>YAML/Config</span>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <h3 class="project-title">
+                        <a href="https://github.com/akoserwal/keycloak-integrations/tree/main/curl-post-request">
+                            curl-post-request
+                        </a>
+                    </h3>
+                    <p class="project-description">
+                        Example curl commands for Keycloak POST requests and token management
+                    </p>
+                    <div class="language-info">
+                        <span class="language" style="background-color: #4EAA25;"></span>
+                        <span>Shell</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>
+            © akoserwal. This page is a simplified representation of the 
+            <a href="https://github.com/akoserwal/keycloak-integrations">keycloak-integrations</a> repository.
+        </p>
+    </footer>
+</body>
+</html>
