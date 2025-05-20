@@ -14,9 +14,7 @@ As AI workloads scale in sensitivity and compute cost, it's crucial to secure in
 
 ## Run Keycloak Locally
 
-```sh
-docker run -p 8081:8080 -e KC_BOOTSTRAP_ADMIN_USERNAME=admin -e KC_BOOTSTRAP_ADMIN_PASSWORD=admin quay.io/keycloak/keycloak:26.2.4 start-dev
-```
+```docker compose up```
 
 ## Run ollama
 
