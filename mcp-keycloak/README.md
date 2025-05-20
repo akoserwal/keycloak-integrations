@@ -2,6 +2,8 @@
 
 As AI workloads scale in sensitivity and compute cost, it's crucial to secure interactions between clients and inference servers. This post demonstrates how to secure a Python-based MCP server-client architecture using Ollama and the LLaMA model stack, protected via OpenID Connect (OIDC) using Keycloak.
 
+Blog: https://medium.com/keycloak/securing-fastmcp-server-client-with-keycloak-using-ollama-llama-stack-in-python-5217efb40b43
+
 ## Prerequisites
 
 * Python 3.10+
